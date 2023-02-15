@@ -1,4 +1,4 @@
-# Lab 1: Michal Hanus:
+# Lab 1: Tomas Kopriva:
 
 ### De Morgan's laws
 
