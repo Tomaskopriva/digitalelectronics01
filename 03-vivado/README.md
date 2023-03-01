@@ -1,4 +1,4 @@
-# Lab 3: Filip Leikep
+# Lab 3: Tomas Kopriva
 
 ### Three-bit wide 4-to-1 multiplexer
 
