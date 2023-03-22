@@ -1,37 +1,41 @@
-library ieee;
-  use ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
 
-------------------------------------------------------------
--- Entity declaration for testbench
-------------------------------------------------------------
 entity tb_ff_rst is
-  -- Entity of testbench is always empty
-end entity tb_ff_rst;
+--  Port ( );
+end tb_ff_rst;
 
-------------------------------------------------------------
--- Architecture body for testbench
-------------------------------------------------------------
 architecture testbench of tb_ff_rst is
 
     constant c_CLK_100MHZ_PERIOD : time := 10 ns;
 
     --Local signals
-    signal sig_clk_100MHz : std_logic;
-    signal sig_rst        : std_logic;
-    signal sig_data       : std_logic;
-    signal sig_dq         : std_logic;
-    signal sig_dq_bar     : std_logic;
+    signal s_clk_100MHz : std_logic;
+    signal s_rst        : std_logic;
+    signal s_data       : std_logic;
+    signal s_d_q        : std_logic;
+    signal s_d_q_bar    : std_logic;
+    signal s_t_q        : std_logic;
+    signal s_t_q_bar    : std_logic;
 
 begin
     -- Connecting testbench signals with d_ff_rst entity
     -- (Unit Under Test)
     uut_d_ff_rst : entity work.d_ff_rst
-        port map (
-            clk   => sig_clk_100MHz,
-            rst   => sig_rst,
-            d     => sig_data,
-            q     => sig_dq,
-            q_bar => sig_dq_bar
+        port map(
+            clk   => s_clk_100MHz,
+            rst   => s_rst,
+            d     => s_data,
+            q     => s_d_q,
+            q_bar => s_d_q_bar
+        );
+    uut_t_ff_rst : entity work.t_ff_rst
+        port map(
+            clk   => s_clk_100MHz,
+            rst   => s_rst,
+            t     => s_data,
+            q     => s_t_q,
+            q_bar => s_t_q_bar
         );
 
     --------------------------------------------------------
@@ -39,10 +43,10 @@ begin
     --------------------------------------------------------
     p_clk_gen : process
     begin
-        while now < 300 ns loop -- 30 periods of 100MHz clock
-            sig_clk_100MHz <= '0';
+        while now < 500 ns loop -- 50 periods of 100MHz clock
+            s_clk_100MHz <= '0';
             wait for c_CLK_100MHZ_PERIOD / 2;
-            sig_clk_100MHz <= '1';
+            s_clk_100MHz <= '1';
             wait for c_CLK_100MHZ_PERIOD / 2;
         end loop;
         wait;                -- Process is suspended forever
@@ -53,14 +57,12 @@ begin
     --------------------------------------------------------
     p_reset_gen : process
     begin
-        sig_rst <= '0';
-
+        s_rst <= '0';
         -- ACTIVATE AND DEACTIVATE RESET HERE
-        wait for 18 ns;
-        sig_rst <= '1';
-        wait for 37 ns;
-        sig_rst <= '0';
-
+         wait for 18 ns;
+         s_rst <= '1';
+         wait for 37 ns;
+         s_rst <= '0';
         wait;
     end process p_reset_gen;
 
@@ -70,18 +72,17 @@ begin
     p_stimulus : process
     begin
         report "Stimulus process started";
-        sig_data <='0'; wait for 13 ns;
-
-        -- DEFINE YOUR INPUT DATA HERE
-        sig_data <='1'; wait for 13 ns;
-        sig_data <='0'; wait for 13 ns;
-        sig_data <='1'; wait for 13 ns;
-        sig_data <='0'; wait for 63 ns;
-        sig_data <='1'; wait for 93 ns;
-        sig_data <='0'; wait for 53 ns;
-        sig_data <='1'; wait for 10 ns;
-        sig_data <='0'; wait for 3 ns;
-        sig_data <='1'; wait for 83 ns;
+        s_data <='0'; wait for 13 ns;
+        s_data <='1'; wait for 13 ns;
+        s_data <='0'; wait for 13 ns;
+        s_data <='1'; wait for 13 ns;
+        s_data <='0'; wait for 63 ns;
+        s_data <='1'; wait for 93 ns;
+        s_data <='0'; wait for 53 ns;
+        s_data <='1'; wait for 10 ns;
+        s_data <='0'; wait for 3 ns;
+        s_data <='1'; wait for 83 ns;
+        
         report "Stimulus process finished";
         wait;
     end process p_stimulus;
