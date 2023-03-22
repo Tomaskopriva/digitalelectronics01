@@ -1,4 +1,4 @@
-# Lab 6: Michal Hurych
+# Lab 6: Tomas Kopriva
 
 ### Bidirectional counter
 
