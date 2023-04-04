@@ -1,4 +1,4 @@
-# Lab 8: Dalibor Drevojanek
+# Lab 8: Tomas Kopriva
 
 ### Traffic light controller
 
