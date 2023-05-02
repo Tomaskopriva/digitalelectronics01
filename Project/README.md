@@ -1,6 +1,6 @@
 # Projekt VHDL : Vysílač a příjmač Morseovy abecedy
 
-## Členové teamu "LuLuBro (JilFaKeš)"
+## Team Mates
 
 * Tomáš Kopřiva
 * Michal Hurych
