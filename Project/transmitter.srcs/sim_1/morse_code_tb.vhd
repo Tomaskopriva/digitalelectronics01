@@ -40,6 +40,30 @@ begin
         wait for 1 ms;
         sw_tb <= "0011";
         wait for 1 ms;
+        sw_tb <= "0100";
+        wait for 1 ms;
+        sw_tb <= "0101";
+        wait for 1 ms;
+        sw_tb <= "0110";
+        wait for 1 ms;
+        sw_tb <= "0111";
+        wait for 1 ms;
+        sw_tb <= "1000";
+        wait for 1 ms;
+        sw_tb <= "1001";
+        wait for 1 ms;
+        sw_tb <= "1010";
+        wait for 1 ms;
+        sw_tb <= "1011";
+        wait for 1 ms;
+        sw_tb <= "1100";
+        wait for 1 ms;
+        sw_tb <= "1101";
+        wait for 1 ms;
+        sw_tb <= "1110";
+        wait for 1 ms;
+        sw_tb <= "1111";
+        wait for 1 ms;
         -- Pokračujte s dalšími testovacími případy pro různé Morseovy znaky
 
         wait;
