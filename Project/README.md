@@ -1,9 +1,9 @@
 
 ### Team members
 
-* Member 1 (responsible for ...)
-* Member 2 (responsible for ...)
-* Member 3 (responsible for ...)
+* Tomáš Kopřiva (responsible for ...)
+* Michal Hurych (responsible for ...)
+
 
 ## Theoretical description and explanation
 
