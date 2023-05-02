@@ -1,7 +1,7 @@
 Vysílač a přijímač/dekodér Morseova kódu.
 ### Team members
 
-* Tomáš Kopřiva (responsible for ...)
+* Tomáš Kopřiva (240637)
 * Michal Hurych (responsible for ...)
 
 
