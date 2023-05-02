@@ -72,12 +72,3 @@ send_out - výstupní signál
 ## Instrukce pro použití
 
 Pro použití naší verze řešení je třeba do obou desek správně nahrát příslušné programy. Poté V desce (kodér) nastavujeme písmenko (viz. Teoretický popis a funkčnost), a tlačítkem BTNC odešleme. Po každým poslání písmenka vyresertujeme desku tlačítkem BTNU, abychom mohli nastavovat další kombinace pro další písmenko.Po odeslání se nám na dekodéru objeví odeslaná kombinace.
-
-
-## Instruktážní video
-[Video zde](https://www.youtube.com/watch?v=lfkyFDDeGNk)
-
-## Použité materiály a inspirace
-
-1. [https://github.com/tomas-fryza/digital-electronics-1](https://github.com/tomas-fryza/digital-electronics-1)
-2. [https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
