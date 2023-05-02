@@ -16,18 +16,17 @@ Dekodér je řešen tak, že snímáme ve vstupním signálu jak dlouhé jsou ú
 
 Pro realizaci tohoto projektu byla použity dvě desky Nexys A7 50T (Jedna pro vysílač, druhá pro příjmač), které jsou kabelem propojeny mezi sebou.
 
-![12710_01_11](https://user-images.githubusercontent.com/124742212/235751287-b5311984-bb20-4c73-9829-ad586a8019ed.png)
 
 
 
 
 ### Vnitřní schéma vysílače:
 
-![image](https://user-images.githubusercontent.com/124742212/235740401-d74fb1d0-9c74-4a3d-91b8-5748d14141f3.png)
+
 
 ### Vnitřní schéma příjmače:
 
-![image](https://user-images.githubusercontent.com/124742212/235775695-8cf5b041-a301-49ab-9ac8-f2a1fa6c5310.png)
+
 
 
 ## Popis softwaru
@@ -35,10 +34,7 @@ Pro realizaci tohoto projektu byla použity dvě desky Nexys A7 50T (Jedna pro v
 Celková funkčnost designu spočívá čistě v tom, že my nastavíme nějakou kombinaci a poté odešleme. Tlačítkem na odeslání se nám podle zadané kombinaci vytvoří signál s parametry: tečka 2s, čárka 4s a mezera 6s. Zadaná kombinace je zobrazená také na 7 segmentových displejích. V dekodéru je násleně vytvořený signál pomocí podmínkových funkcí signál zpět převeden do podoby Morseova kódu, který se zobrazí na 7 segmentových displejích.
 
 ### Odkazy na soubory: 
-Design source: [zde](https://github.com/LukasFaltys/digital-electronics-1/blob/main/Project/Soubory%20projektu%20-%20Vivavo/morse%20code/morse%20code.srcs/sources_1/new/morse_try.vhd)     
-Testbench source: [zde](https://github.com/LukasFaltys/digital-electronics-1/blob/main/Project/Soubory%20projektu%20-%20Vivavo/morse%20code/morse%20code.srcs/sim_1/new/morse_TB.vhd)     
-Top file: [zde](https://github.com/LukasFaltys/digital-electronics-1/blob/main/Project/Soubory%20projektu%20-%20Vivavo/morse%20code/morse%20code.srcs/sources_1/new/TOP.vhd)     
-Constrain file: [zde](https://github.com/LukasFaltys/digital-electronics-1/blob/main/Project/Soubory%20projektu%20-%20Vivavo/morse%20code/morse%20code.srcs/constrs_1/new/cnst.xdc)
+
 
 
 
