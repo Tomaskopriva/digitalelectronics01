@@ -17,30 +17,27 @@ entity top is
 end top;
 
 architecture behavioral of top is
+  signal seg1: std_logic_vector(7 downto 0);
+  signal position: std_logic_vector(3 downto 0);
 begin
+  seg1(7) <= DP;
+  seg1(6) <= CA;
+  seg1(5) <= CB;
+  seg1(4) <= CC;
+  seg1(3) <= CD;
+  seg1(2) <= CE;
+  seg1(1) <= CF;
+  seg1(0) <= CG;
+
+  position(0) <= AN(0);
+  position(1) <= AN(1);
+  position(2) <= AN(2);
+  position(3) <= AN(3);
+  
   hex2seg: entity work.morse_decoder
     port map (
       signal_in => JA(1),
-      
-      seg1(7) => DP,
-      seg1(6) => CA,
-      seg1(5) => CB,
-      seg1(4) => CC,
-      seg1(3) => CD,
-      seg1(2) => CE,
-      seg1(1) => CF,
-      seg1(0) => CG,
-      
-      
-      
-      position(0) => AN(0),
-      position(1) => AN(1),
-      position(2) => AN(2),
-      position(3)=> AN(3)
-
-
-      
-      
-      
+      seg1 => seg1,
+      position => position
     );
 end architecture behavioral;
