@@ -8,7 +8,8 @@ entity MorseDecoder is
         decoded_char: out character
     );
 end entity MorseDecoder;
-
+    
+    
 architecture Behavioral of MorseDecoder is
     function decode_morse(signal: std_logic_vector(3 downto 0)) return character is
     begin
