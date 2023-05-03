@@ -35,11 +35,6 @@ Po úspěšném sestavení a konfiguraci FPGA na desce Nexys A7 50T je možné v
 
 
 
-### Vnitřní schéma vysílače:
-
-
-
-### Vnitřní schéma příjmače:
 
 
 
